@@ -383,7 +383,8 @@ namespace HuggingfaceHub
                 using (var response = await Utils.HttpRequestWrapperAsync(client, request, false, true))
                 {
                     response.EnsureSuccessStatusCode();
-                    Debug.Assert(response.Content.Headers.TryGetValues("Content-Length", out var lengths));
+                    IEnumerable<string?>? lengths = null;
+                    Debug.Assert(response.Content.Headers.TryGetValues("Content-Length", out lengths));
                     Debug.Assert(lengths is not null && lengths!.Count() > 0);
                     // NOTE: 'total' is the total number of bytes to download, not the number of bytes in the file.
                     // If the file is compressed, the number of bytes in the saved file will be higher than 'total'.

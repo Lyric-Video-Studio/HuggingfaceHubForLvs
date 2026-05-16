@@ -331,7 +331,7 @@ namespace HuggingfaceHub
                         Logger?.LogDebug($"Storing {url} in cache at {blobPath}");
                         ChmodAndReplace(tempFilePath, blobPath);
                         Logger?.LogDebug("Duplicate in local dir (small file and use_symlink set to 'auto')");
-                        File.Copy(blobPath, localDirFilepath);
+                        File.Copy(blobPath, localDirFilepath, true);
                     }
                     else
                     {

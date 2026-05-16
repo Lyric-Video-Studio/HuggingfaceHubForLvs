@@ -667,7 +667,7 @@ namespace HuggingfaceHub
             }
             else
             {
-                File.Copy(realBlobPath, localDirFilepath);
+                File.Copy(realBlobPath, localDirFilepath, true);
             }
             return localDirFilepath;
 #else
@@ -742,11 +742,11 @@ namespace HuggingfaceHub
             // Symlinks are not supported => let's move or copy the file.
             if (newBlob)
             {
-                File.Move(absSrc, absDst);
+                File.Move(absSrc, absDst, true);
             }
             else
             {
-                File.Copy(absSrc, absDst);
+                File.Copy(absSrc, absDst, true);
             }
 #else
             throw new Exception("Symlinks creation is not supported with dotnet runtime version < 6");

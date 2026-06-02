@@ -15,13 +15,13 @@
     <RepositoryUrl>https://github.com/AsakusaRinne/HuggingfaceHub</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Huggingface, Model, Download</PackageTags>
-    <PackageIconUrl>https://avatars.githubusercontent.com/u/25720743?s=200&amp;v=4</PackageIconUrl>
     <Description>
       HuggingfaceHub is a library to download models and files from Huggingface in .NET.
     </Description>
     <PackageOutputPath>packages</PackageOutputPath>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>

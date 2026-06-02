@@ -61,7 +61,7 @@ namespace HuggingfaceHub
         /// Filter repo objects based on an allowlist and a denylist.
         /// </summary>
         /// <param name="items"></param>
-        /// <param name="allow_patterns"></param>
+        /// <param name="allowPatterns"></param>
         /// <param name="ignorePatterns"></param>
         /// <returns></returns>
         public static IEnumerable<string> FilterRepoObjects(IEnumerable<string> items, string[]? allowPatterns, string[]? ignorePatterns){

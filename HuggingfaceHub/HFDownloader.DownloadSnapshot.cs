@@ -17,7 +17,7 @@ namespace HuggingfaceHub
         /// If `localDir` is provided, the file structure from the repo will be replicated in this location. You can configure
         /// how you want to move those files:
         ///   - If `localDirUseSymlinks=null` (default), files are downloaded and stored in the cache directory as blob
-        ///     files. Small files (<5MB) are duplicated in `localDir` while a symlink is created for bigger files. The goal
+        ///     files. Small files (&lt;5MB) are duplicated in `localDir` while a symlink is created for bigger files. The goal
         ///     is to be able to manually edit and save small files without corrupting the cache while saving disk space for
         ///     binary files. The 5MB threshold can be configured with the <see cref="HFGlobalConfig.LocalDirAutoSymlinkThreshold"/>.
         ///   - If `localDirUseSymlinks=True`, files are downloaded, stored in the cache directory and symlinked in `localDir`.

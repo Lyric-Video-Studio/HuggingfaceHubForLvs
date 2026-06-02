@@ -34,20 +34,19 @@ namespace HuggingfaceHub
         }
 
         /// <summary>
-        /// Build headers dictionary to send in a HF Hub call.
-        /// 
-        /// By default, authorization token is always provided either from argument (explicit
-        /// use) or retrieved from the cache (implicit use). To explicitly avoid sending the
-        /// token to the Hub, set `token=False`.
-
-        /// In case of an API call that requires write access, an error is thrown if token is
-        /// `null` or token is an organization token (starting with `"api_org***"`).
-
-        /// In addition to the auth header, a user-agent is added to provide information about
-        /// the installed packages (versions of python, huggingface_hub, torch, tensorflow,
-        /// fastai and fastcore).
-
+        /// Build the headers sent in a Hugging Face Hub request.
         /// </summary>
+        /// <remarks>
+        /// By default, the authorization token is provided either from the argument or from the
+        /// local cache. To explicitly avoid sending the token to the Hub, set <c>token</c> to
+        /// <see langword="null"/>.
+        ///
+        /// If the API call requires write access, an error is thrown when the token is missing
+        /// or is an organization token starting with <c>api_org</c>.
+        ///
+        /// In addition to the authorization header, a user-agent value is added to describe
+        /// the installed client packages.
+        /// </remarks>
         /// <param name="token"></param>
         /// <param name="isWriteAction"></param>
         /// <param name="userAgent"></param>

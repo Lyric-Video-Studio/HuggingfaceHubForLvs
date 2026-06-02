@@ -462,9 +462,9 @@ namespace HuggingfaceHub
         }
 
         /// <summary>
-        /// Fetch metadata of a file versioned on the Hub for a given url.
+        /// Fetch metadata of a file versioned on the Hub for a given URI.
         /// </summary>
-        /// <param name="url"></param>
+        /// <param name="uri"></param>
         /// <param name="token"></param>
         /// <param name="proxy"></param>
         /// <param name="timeout"></param>
